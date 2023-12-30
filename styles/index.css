@@ -90,4 +90,89 @@ section:nth-child(5) {
 /* javascript 사용해서 사용할 수도 있고  */
 #search:focus::placeholder {
   color: red;
+}section:nth-child(2){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tabs_continer {
+  width: 50%;
+}
+
+.tabs_continer button {
+  padding: 20px 30px;
+}
+
+.tabs_continer .tab_contents > div {
+  height: 200px;
+  background-color: pink;
+  display: none;
+}
+
+.tabs_continer .tab_contents > div:nth-child(1) {
+  display: block;
+}
+
+.tabs_continer > button:nth-child(1):hover ~ .tab_contents > div:nth-child(1) {
+  display: block;
+}
+
+.tabs_continer > button:nth-child(2):hover ~ .tab_contents > div:nth-child(2) {
+  display: block;
+}
+
+.tabs_continer > button:nth-child(3):hover ~ .tab_contents > div:nth-child(3) {
+  display: block;
+}
+
+section:nth-child(3) {
+  color: white;
+}
+
+.tab_contents > div {
+  display: none;
+  height: 200px;
+  background-color: gray;
+}
+
+section:nth-child(3) input:nth-child(1):checked~ .tab_contents > div:nth-child(1) {
+  display: block;
+}
+
+section:nth-child(3) input:nth-child(2):checked~ .tab_contents > div:nth-child(2) {
+  display: block;
+}
+
+section:nth-child(3) input:nth-child(3):checked~ .tab_contents > div:nth-child(3) {
+  display: block;
+}
+
+section:nth-child(3) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section:nth-child(3) input[name="btn"] {
+  display: none;
+}
+
+section:nth-child(3) label {
+  padding: 50px;
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 10px 10px 0 0;
+}
+
+section:nth-child(3) input:nth-child(1):checked ~ label:nth-of-type(1) {
+  background-color: red;
+}
+
+section:nth-child(3) input:nth-child(2):checked ~ label:nth-of-type(2) {
+  background-color: red;
+}
+
+section:nth-child(3) input:nth-child(3):checked ~ label:nth-of-type(3) {
+  background-color: red;
 }
