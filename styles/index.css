@@ -90,39 +90,36 @@ section:nth-child(5) {
 /* javascript 사용해서 사용할 수도 있고  */
 #search:focus::placeholder {
   color: red;
-}section:nth-child(2){
+}
+
+section:nth-child(2) {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.tabs_continer {
+.tabs_container {
   width: 50%;
 }
 
-.tabs_continer button {
+.tabs_container button {
   padding: 20px 30px;
 }
-
-.tabs_continer .tab_contents > div {
+.tabs_container .tab_contents > div {
   height: 200px;
   background-color: pink;
   display: none;
 }
+/* .tabs_container .tab_contents > div:nth-child(1) {
+  display: block;
+} */
 
-.tabs_continer .tab_contents > div:nth-child(1) {
+.tabs_container > button:nth-child(1):hover ~ .tab_contents > div:nth-child(1) {
   display: block;
 }
-
-.tabs_continer > button:nth-child(1):hover ~ .tab_contents > div:nth-child(1) {
+.tabs_container > button:nth-child(2):hover ~ .tab_contents > div:nth-child(2) {
   display: block;
 }
-
-.tabs_continer > button:nth-child(2):hover ~ .tab_contents > div:nth-child(2) {
-  display: block;
-}
-
-.tabs_continer > button:nth-child(3):hover ~ .tab_contents > div:nth-child(3) {
+.tabs_container > button:nth-child(3):hover ~ .tab_contents > div:nth-child(3) {
   display: block;
 }
 
@@ -136,16 +133,29 @@ section:nth-child(3) {
   background-color: gray;
 }
 
-section:nth-child(3) input:nth-child(1):checked~ .tab_contents > div:nth-child(1) {
+section:nth-child(3)
+  input:nth-child(1):checked
+  ~ .tab_contents
+  > div:nth-child(1) {
   display: block;
 }
 
-section:nth-child(3) input:nth-child(2):checked~ .tab_contents > div:nth-child(2) {
+section:nth-child(3)
+  input:nth-child(2):checked
+  ~ .tab_contents
+  > div:nth-child(2) {
   display: block;
 }
 
-section:nth-child(3) input:nth-child(3):checked~ .tab_contents > div:nth-child(3) {
+section:nth-child(3)
+  input:nth-child(3):checked
+  ~ .tab_contents
+  > div:nth-child(3) {
   display: block;
+}
+
+.tabs_form {
+  width: 50%;
 }
 
 section:nth-child(3) {
@@ -153,35 +163,30 @@ section:nth-child(3) {
   justify-content: center;
   align-items: center;
 }
-
+/* section:nth-child(3) input[type="radio"]{ */
 section:nth-child(3) input[name="btn"] {
   display: none;
 }
 
 section:nth-child(3) label {
-  padding: 50px;
+  padding: 10px 20px;
   display: inline-block;
   border: 1px solid white;
   border-radius: 10px 10px 0 0;
 }
 
 section:nth-child(3) input:nth-child(1):checked ~ label:nth-of-type(1) {
+  /* section:nth-child(3) input:nth-child(1) ~ label:nth-child(4) { */
   background-color: red;
 }
-
 section:nth-child(3) input:nth-child(2):checked ~ label:nth-of-type(2) {
   background-color: red;
 }
-
 section:nth-child(3) input:nth-child(3):checked ~ label:nth-of-type(3) {
   background-color: red;
 }
 
-.table_container table {
-  width: 50%;
-  height: 400px;
-}
-.table_container{
+.table_container {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -191,13 +196,17 @@ section:nth-child(3) input:nth-child(3):checked ~ label:nth-of-type(3) {
 .table_container h2 {
   font-size: 50px;
 }
-/* .table_container > tbody > tr{} */
-.table_continer tr:nth-child(2n) {
+.table_container table {
+  width: 50%;
+  height: 400px;
+}
+
+/* .tabs_container>tbody>tr{} */
+.table_container tr:nth-child(2n) {
   /* 짝수 */
   background-color: lavender;
 }
-
-.table_continer tr:nth-child(2n+1) {
+.table_container tr:nth-child(2n + 1) {
   /* 홀수 */
   background-color: purple;
 }
